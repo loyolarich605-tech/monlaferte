@@ -131,6 +131,29 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Estilo para el mensaje del easter egg 2 */
+        #audioFeedback {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(200, 16, 46, 0.85);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            display: none;
+            z-index: 9999;
+            pointer-events: none;
+            animation: fadeOut 3s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -190,15 +213,24 @@
         <p>© 2026 Equipo Sierra • Página creada con amor para Mon Laferte • México</p>
     </footer>
 
-    <!-- Easter egg: presionar "M" reproduce / pausa "Quédate Esta Noche" -->
+    <!-- Mensaje temporal del easter egg 2 -->
+    <div id="audioFeedback">Easter Egg 2</div>
+
+    <!-- Easter egg: presionar "M" reproduce desde 0 / pausa "Quédate Esta Noche" -->
     <script>
         const audioMon = new Audio('quedate-esta-noche.mp3');
 
         document.addEventListener('keydown', function(event) {
             if (event.key.toLowerCase() === 'm') {
                 if (audioMon.paused) {
-                    audioMon.currentTime = 0; // Reinicia desde el principio cada vez que se activa
+                    audioMon.currentTime = 0; // Siempre reinicia desde el segundo 0
                     audioMon.play();
+                    // Muestra el texto "Easter Egg 2" por 3 segundos
+                    const feedback = document.getElementById('audioFeedback');
+                    feedback.style.display = 'block';
+                    setTimeout(() => {
+                        feedback.style.display = 'none';
+                    }, 3000);
                 } else {
                     audioMon.pause();
                 }
