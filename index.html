@@ -197,6 +197,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key.toLowerCase() === 'm') {
                 if (audioMon.paused) {
+                    audioMon.currentTime = 0; // Reinicia desde el principio cada vez que se activa
                     audioMon.play();
                 } else {
                     audioMon.pause();
