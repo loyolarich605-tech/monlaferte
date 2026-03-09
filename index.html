@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Laferte - Mi Pasatiempo Favorito</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('monlafertefondo.jpg'); /* tu foto de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: inherit;
+            background-image: url('monlafertefondo.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -2;
+        }
+        header {
+            background: linear-gradient(to right, #c8102e, #8b0000);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            color: #c8102e;
+            border-bottom: 3px solid #c8102e;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #c8102e;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ffe6e6;
+        }
+        iframe {
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+        .saludo, .easter-egg {
+            text-align: center;
+            margin: 50px 0;
+        }
+        button, .easter-btn {
+            background-color: #c8102e;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(200,16,46,0.4);
+            text-decoration: none;
+            display: inline-block;
+        }
+        button:hover, .easter-btn:hover {
+            background-color: #a00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(200,16,46,0.6);
+        }
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9em;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mon Laferte<br>Mi Pasatiempo Favorito en la Música</h1>
+    </header>
+
+    <main>
+
+        <p>Mon Laferte es una cantante, compositora y multiinstrumentista chilena-mexicana conocida por su voz única, poderosa y llena de sentimiento. Su música combina rock, bolero, cumbia, pop latino y mucha emoción cruda. Desde su álbum <strong>Vol. 1</strong> hasta producciones más recientes como <strong>1940 Carmen</strong>, cada canción transmite historias profundas que conectan directamente con el corazón. Escuchar a Mon Laferte me salvo de mi depresión, Mon Laferte es un sentimiento, Mon Laferte es un estilo de vida 🛐🛐🛐🛐🛐🛐🛐💗💗💗💗💗💗💗💗🙏🙏🙏🙏🙏🙏🙏 </p>
+
+        <img src="monlafertenorma.jpg" alt="Mon Laferte Album Norma">
+
+        <h2>Top 5 Canciones Favoritas</h2>
+
+        <table>
+            <tr>
+                <th>Posición</th>
+                <th>Canción</th>
+                <th>Año de Lanzamiento</th>
+            </tr>
+            <tr><td>1</td><td>Quédate Esta Noche</td><td>2018</td></tr>
+            <tr><td>2</td><td>Flor de Amapola</td><td>2015</td></tr>
+            <tr><td>3</td><td>Supermercado</td><td>2021</td></tr>
+            <tr><td>4</td><td>Si Tú Me Quisieras</td><td>2015</td></tr>
+            <tr><td>5</td><td>Tu Falta de Querer</td><td>2015</td></tr>
+        </table>
+
+        <h2>Video Recomendado: Supermercado (Visualizer Oficial)</h2>
+
+        <iframe 
+            src="https://www.youtube.com/embed/skyk3T7Hu1g" 
+            title="Mon Laferte - Supermercado (Visualizer)" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+        <p style="text-align: center; margin-top: 20px; font-size: 1.1em;">¿No carga el video? Abre directamente:</p>
+        <div style="text-align: center;">
+            <a href="https://www.youtube.com/watch?v=skyk3T7Hu1g" target="_blank">
+                <button>Ver Supermercado en YouTube</button>
+            </a>
+        </div>
+
+        <div class="saludo">
+            <h2>¡Bienvenid@ a mi página!</h2>
+            <p>Haz clic en el botón para ver mi saludo personal grabado especialmente para quien visite esta página.</p>
+            <a href="https://www.tiktok.com/@isai_4138/video/7613874662841355528?is_from_webapp=1&sender_device=pc&web_id=7612521822399776273" target="_blank">
+                <button>Ver Saludo</button>
+            </a>
+        </div>
+
+        <!-- Easter egg disfrazado de "modo oscuro" -->
+        <div class="easter-egg">
+            <h2>¿Quieres probar el Modo Oscuro?</h2>
+            <a href="yummer.jpg" target="_blank" class="easter-btn">
+                Activar Modo Oscuro
+            </a>
+            <p style="font-size: 0.9em; margin-top: 10px; color: #777;">
+               
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Equipo Sierra • Página creada con amor para Mon Laferte • México</p>
+    </footer>
+
+</body>
+</html>
