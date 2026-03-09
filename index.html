@@ -134,19 +134,13 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>Mon Laferte<br>Mi Pasatiempo Favorito en la Música</h1>
     </header>
-
     <main>
-
         <p>Mon Laferte es una cantante, compositora y multiinstrumentista chilena-mexicana conocida por su voz única, poderosa y llena de sentimiento. Su música combina rock, bolero, cumbia, pop latino y mucha emoción cruda. Desde su álbum <strong>Vol. 1</strong> hasta producciones más recientes como <strong>1940 Carmen</strong>, cada canción transmite historias profundas que conectan directamente con el corazón. Escuchar a Mon Laferte me salvo de mi depresión, Mon Laferte es un sentimiento, Mon Laferte es un estilo de vida 🛐🛐🛐🛐🛐🛐🛐💗💗💗💗💗💗💗💗🙏🙏🙏🙏🙏🙏🙏 </p>
-
         <img src="monlafertenorma.jpg" alt="Mon Laferte Album Norma">
-
         <h2>Top 5 Canciones Favoritas</h2>
-
         <table>
             <tr>
                 <th>Posición</th>
@@ -159,25 +153,21 @@
             <tr><td>4</td><td>Si Tú Me Quisieras</td><td>2015</td></tr>
             <tr><td>5</td><td>Tu Falta de Querer</td><td>2015</td></tr>
         </table>
-
         <h2>Video Recomendado: Supermercado (Visualizer Oficial)</h2>
-
-        <iframe 
-            src="https://www.youtube.com/embed/skyk3T7Hu1g" 
-            title="Mon Laferte - Supermercado (Visualizer)" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        <iframe
+            src="https://www.youtube.com/embed/skyk3T7Hu1g"
+            title="Mon Laferte - Supermercado (Visualizer)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             referrerpolicy="strict-origin-when-cross-origin">
         </iframe>
-
         <p style="text-align: center; margin-top: 20px; font-size: 1.1em;">¿No carga el video? Abre directamente:</p>
         <div style="text-align: center;">
             <a href="https://www.youtube.com/watch?v=skyk3T7Hu1g" target="_blank">
                 <button>Ver Supermercado en YouTube</button>
             </a>
         </div>
-
         <div class="saludo">
             <h2>¡Bienvenid@ a mi página!</h2>
             <p>Haz clic en el botón para ver mi saludo personal grabado especialmente para quien visite esta página.</p>
@@ -185,7 +175,6 @@
                 <button>Ver Saludo</button>
             </a>
         </div>
-
         <!-- Easter egg disfrazado de "modo oscuro" -->
         <div class="easter-egg">
             <h2>¿Quieres probar el Modo Oscuro?</h2>
@@ -193,15 +182,29 @@
                 Activar Modo Oscuro
             </a>
             <p style="font-size: 0.9em; margin-top: 10px; color: #777;">
-               
+              
             </p>
         </div>
-
     </main>
-
     <footer>
         <p>© 2026 Equipo Sierra • Página creada con amor para Mon Laferte • México</p>
     </footer>
+
+    <!-- Easter egg: presionar "M" reproduce / pausa "Quédate Esta Noche" -->
+    <script>
+        const audioMon = new Audio('quedate-esta-noche.mp3');
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key.toLowerCase() === 'm') {
+                if (audioMon.paused) {
+                    audioMon.play();
+                } else {
+                    audioMon.pause();
+                }
+                event.preventDefault(); // Evita scroll u otros comportamientos
+            }
+        });
+    </script>
 
 </body>
 </html>
